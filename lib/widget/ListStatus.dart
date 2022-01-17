@@ -18,6 +18,7 @@ class ListStatus extends StatelessWidget {
                 name: e.name,
                 caption: e.caption,
                 verified: e.verified,
+                location: e.location,
               ))
           .toList(),
     );

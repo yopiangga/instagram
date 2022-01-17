@@ -20,7 +20,7 @@ class WBottomNavBar extends StatelessWidget {
           children: [
             Image.asset(
               icon,
-              width: 29,
+              width: 25,
             ),
             SizedBox(
               height: 5,

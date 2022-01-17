@@ -45,7 +45,7 @@ class _DashboardState extends State<Dashboard>
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
-              height: 26,
+              height: 24,
               child: Image.asset(
                 'assets/images/camera.png',
               ),
@@ -66,7 +66,7 @@ class _DashboardState extends State<Dashboard>
                   Positioned(
                     top: 5,
                     child: Container(
-                      height: 26,
+                      height: 24,
                       child: Image.asset(
                         'assets/images/message.png',
                       ),
@@ -163,8 +163,8 @@ class _DashboardState extends State<Dashboard>
                       ),
                       SizedBox(width: 4),
                       VerticalDivider(
-                        indent: 10,
-                        endIndent: 20,
+                        indent: 20,
+                        endIndent: 40,
                       ),
                       SizedBox(width: 4),
                       ListStory()
@@ -174,7 +174,7 @@ class _DashboardState extends State<Dashboard>
                 Container(
                   child: ListStatus(),
                 ),
-                SizedBox(height: 50),
+                SizedBox(height: 10),
               ],
             ),
           ),

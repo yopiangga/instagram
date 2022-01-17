@@ -41,12 +41,13 @@ class WStory extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 4,
           ),
           Text(
             name,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
           )
         ],
       ),

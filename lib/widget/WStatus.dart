@@ -8,15 +8,17 @@ class WStatus extends StatelessWidget {
   String image;
   String imageProfile;
   bool verified;
+  String location;
 
-  WStatus({
-    Key? key,
-    this.image = "",
-    this.imageProfile = "",
-    this.name = "",
-    this.caption = "",
-    this.verified = false,
-  }) : super(key: key);
+  WStatus(
+      {Key? key,
+      this.image = "",
+      this.imageProfile = "",
+      this.name = "",
+      this.caption = "",
+      this.verified = false,
+      this.location = ""})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class WStatus extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.fromLTRB(15, 8, 15, 8),
             child: Row(
               children: [
                 CircleAvatar(
@@ -32,28 +34,42 @@ class WStatus extends StatelessWidget {
                   backgroundImage: NetworkImage(imageProfile),
                 ),
                 SizedBox(
-                  width: 8,
+                  width: 10,
                 ),
                 Expanded(
-                    child: Row(
-                  children: [
-                    Text(
-                      name,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Image.asset(
-                      "assets/images/verified.png",
-                      width: 16,
-                    )
-                  ],
-                )),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            name,
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Image.asset(
+                            "assets/images/verified.png",
+                            width: 14,
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        height: 2,
+                      ),
+                      Text(
+                        location,
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.w400),
+                      ),
+                    ],
+                  ),
+                ),
                 Image.asset(
                   "assets/images/more.png",
-                  width: 16,
+                  width: 14,
                 )
               ],
             ),
@@ -76,27 +92,27 @@ class WStatus extends StatelessWidget {
                   children: [
                     Image.asset(
                       "assets/images/love.png",
-                      width: 25,
+                      width: 24,
                     ),
                     SizedBox(
-                      width: 15,
+                      width: 24,
                     ),
                     Image.asset(
                       "assets/images/comment.png",
-                      width: 25,
+                      width: 24,
                     ),
                     SizedBox(
-                      width: 15,
+                      width: 24,
                     ),
                     Image.asset(
                       "assets/images/message.png",
-                      width: 25,
+                      width: 24,
                     ),
                   ],
                 )),
                 Image.asset(
                   "assets/images/bookmark.png",
-                  width: 25,
+                  width: 24,
                 ),
               ],
             ),
@@ -141,7 +157,7 @@ class WStatus extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 14),
+            margin: EdgeInsets.only(top: 10),
             width: MediaQuery.of(context).size.width,
             height: 28,
             child: ListView(
@@ -159,7 +175,7 @@ class WStatus extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.only(left: 15, right: 15),
-            margin: EdgeInsets.only(top: 15),
+            margin: EdgeInsets.only(top: 10),
             width: double.infinity,
             child: Text(
               caption,
@@ -189,11 +205,12 @@ class WStatus extends StatelessWidget {
                     style: TextStyle(color: CustomColors.greyDark),
                   ),
                   SizedBox(
-                    width: 20,
+                    width: 10,
                   ),
                   Text(
                     "Translate",
                     textAlign: TextAlign.start,
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ],
               )),

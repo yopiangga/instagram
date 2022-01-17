@@ -9,6 +9,7 @@ class PStatus with ChangeNotifier {
   List<MStatus> _status = [
     MStatus(
         name: faker.person.name(),
+        location: faker.person.name(),
         imageProfile: "https://picsum.photos/200/300?random=1",
         verified: true,
         image: "https://picsum.photos/300/300?random=2",
@@ -16,6 +17,7 @@ class PStatus with ChangeNotifier {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
     MStatus(
         name: faker.person.name(),
+        location: faker.person.name(),
         imageProfile: "https://picsum.photos/200/300?random=3",
         verified: true,
         image: "https://picsum.photos/300/300?random=4",
@@ -23,6 +25,7 @@ class PStatus with ChangeNotifier {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
     MStatus(
         name: faker.person.name(),
+        location: faker.person.name(),
         imageProfile: "https://picsum.photos/200/300?random=5",
         verified: true,
         image: "https://picsum.photos/300/300?random=6",
