@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/page/Dashboard.dart';
+import 'package:instagram/provider/PStatus.dart';
 import 'package:instagram/provider/PStory.dart';
 import 'package:provider/provider.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       home: MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (context) => PStory()),
+          ChangeNotifierProvider(create: (context) => PStatus())
         ],
         child: Dashboard(),
       ),

@@ -2,7 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:instagram/custom/CustomColors.dart';
+import 'package:instagram/widget/ListStatus.dart';
 import 'package:instagram/widget/ListStory.dart';
+import 'package:instagram/widget/WStory.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -76,16 +78,36 @@ class Dashboard extends StatelessWidget {
         ),
       ),
       body: Container(
+        color: Colors.white,
         child: ListView(
           children: [
             Container(
+              margin: EdgeInsets.only(top: 10),
               width: double.infinity,
               height: 100,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: [ListStory()],
+                children: [
+                  SizedBox(width: 10),
+                  WStory(
+                    name: "Your Story",
+                    image: "https://picsum.photos/200/300?random=6",
+                    view: false,
+                  ),
+                  SizedBox(width: 4),
+                  VerticalDivider(
+                    indent: 10,
+                    endIndent: 20,
+                  ),
+                  SizedBox(width: 4),
+                  ListStory()
+                ],
               ),
-            )
+            ),
+            Container(
+              child: ListStatus(),
+            ),
+            SizedBox(height: 50),
           ],
         ),
       ),

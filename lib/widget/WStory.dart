@@ -10,13 +10,14 @@ class WStory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 80,
-      color: Colors.amber,
+      width: 74,
+      // color: Colors.amber,
       child: Column(
         children: [
           Container(
             width: 64,
             height: 64,
+            padding: EdgeInsets.all(2),
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
@@ -28,13 +29,10 @@ class WStory extends StatelessWidget {
                       CustomColors.purple
                     ])),
             child: Container(
-              width: 58,
-              height: 58,
+              padding: EdgeInsets.all(2),
               decoration: BoxDecoration(
                   shape: BoxShape.circle, color: CustomColors.light),
               child: Container(
-                  width: 54,
-                  height: 54,
                   decoration: BoxDecoration(shape: BoxShape.circle),
                   child: CircleAvatar(
                     radius: 48, // Image radius

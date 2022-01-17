@@ -9,4 +9,5 @@ class CustomColors {
   static Color yellowDark = Color(0xffF95F0F);
   static Color light = Color(0xffF9FAF9);
   static Color grey = Color(0xffDDDFE1);
+  static Color greyDark = Color(0xffBABEC3);
 }
